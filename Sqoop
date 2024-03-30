@@ -1,0 +1,3 @@
+create table movies (movie_id int,movie_title varchar(255),release_date date,video_release_date date,IMdB_URL varchar(255),unknown int,Action int, Adventure int,Animation int,Childrens int,Comedy int,Crime int,Documentary int,Drama int,Fantasy int,Film_Noir int,Horror int,Musical int, Mystery int,Romance int,Sci_Fi int,Thriller int, War int,Western int) row format delimited fields terminated by '|' lines terminated by '\n' stored as textfile;
+
+create table ratings (user_id int,m_id int,item int,ts int)
