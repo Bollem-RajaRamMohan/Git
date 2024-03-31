@@ -22,7 +22,7 @@ import sys
 
 
 
-hadoop jar /home/ubh01/hadoop-2.7.1/share/hadoop/tools/lib/hadoop/streaming-2.7.1.jar -file /home/ubh01/mapper.py -mapper mapper.py -file /home/ubh01/reducer.py -reducer reducer.py -input /mapreducer/input.txt -output /mapreducer/output
+
 
 current_word = None
 current_count = 0
@@ -51,3 +51,6 @@ for line in sys.stdin:    # input comes from STDIN
 
 if current_word == word:    # do not forget to output the last word if needed!
     print '%s\t%s' % (current_word, current_count)
+
+
+hadoop jar /home/ubh01/hadoop-2.7.1/share/hadoop/tools/lib/hadoop/streaming-2.7.1.jar -file /home/ubh01/mapper.py -mapper mapper.py -file /home/ubh01/reducer.py -reducer reducer.py -input /mapreducer/input.txt -output /mapreducer/output
