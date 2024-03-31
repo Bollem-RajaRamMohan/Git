@@ -20,6 +20,10 @@ for line in sys.stdin:    # Input is read from STDIN and the output of this file
 from operator import itemgetter
 import sys
 
+
+
+hadoop jar /home/ubh01/hadoop-2.7.1/share/hadoop/tools/lib/hadoop/streaming-2.7.1.jar -file /home/ubh01/mapper.py -mapper mapper.py -file /home/ubh01/reducer.py -reducer reducer.py -input /mapreducer/input.txt -output /mapreducer/output
+
 current_word = None
 current_count = 0
 word = None
